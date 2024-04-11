@@ -6,7 +6,7 @@ import admin from "./src/routes/admin/adminIndex_routes";
 import user from "./src/routes/user/userIndex_routes";
 const server = express();
 
-dotenv.config({
+dotenv.config({  
     path: './.env'
 })
 
@@ -14,7 +14,7 @@ export class DBUtil{
     public static connectToDb(dbUrl: string, dbName: string): Promise<string> {
         return new Promise((resolve, reject)=>{
             mongoose.connect(dbUrl,{
-                dbName: dbName
+                dbName: dbName  
             })
             .then(() => {
                 resolve('MongoDB connected.... !')
@@ -29,7 +29,7 @@ export class DBUtil{
     }
 }
 
-const port: Number | undefined = Number(process.env.PORT);
+const port: Number | undefined = Number(process.env.PORT);  
 const dbUrl: string | undefined = process.env.MONGODB_URL;
 const dbName: string | undefined = process.env.MONGODB_NAME;
 
