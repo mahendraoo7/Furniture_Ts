@@ -3,10 +3,10 @@ import { Request } from "express";
 
 const storage = multer.diskStorage({
     destination: function (request: Request, file, cb) {
-      cb(null, 'public/images')
+      cb(null, 'src/public/images')
     },
     filename: function (request: Request, file, cb) {
-      cb(null, `${Date.now()}_${file.originalname.replace(/\s+/g, "_")}`)
+      cb(null, `${Date.now()}_${file.originalname.replace(/\s+/g, "/")}`)
     }
 })
 

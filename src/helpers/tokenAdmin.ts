@@ -24,6 +24,6 @@ export const tokenAdmin = async (req: Request,res: Response,next: NextFunction) 
                     res.json({message: "Invalide admin"})
                 }
     } catch (error) {
-        return res.status(500).json({message: "Invalide admin"})
+        return res.status(500).json({message: "internal Server Error"})
     }
 }

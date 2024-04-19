@@ -9,8 +9,6 @@ declare global {
         }
     }
 }
-
-
 export const createProduct = async (req: Request ,res: Response) => {
     try {
         let {productName, productPrice, role, productImage} = req.body;
