@@ -41,7 +41,7 @@ export const addOrder = async (req:Request,res:Response) => {
 
 export const getOrder = async (req:Request,res: Response) => {
     try {
-        let getorder = await orderService.getAllOrder({user: req.user._id, isDelete: false});
+        let getorder = await orderService.getAllOrder({user: req.query._id, isDelete: false});
         if(!getorder){
             return res.status(401).json({message:"No Order Found!"})
         }

@@ -28,7 +28,6 @@ export class DBUtil{
         })
     }
 }
-
 const port: Number | undefined = Number(process.env.PORT);  
 const dbUrl: string | undefined = process.env.MONGODB_URL;
 const dbName: string | undefined = process.env.MONGODB_NAME;
